@@ -2,6 +2,8 @@
   game.state.add('menu', {preload:preload, create:create});
 
   function preload(){
+
+		game.load.image('preloaderBar', 'GameFiles/loading2.png');
     game.load.tilemap('mario', 'assets/backgrounds/level1.json', null, Phaser.Tilemap.TILED_JSON);
     game.load.tilemap('mario2', 'assets/backgrounds/marioLevel2.json', null, Phaser.Tilemap.TILED_JSON);
     game.load.image('menu', 'assets/backgrounds/PiratesBooty.png');
@@ -51,7 +53,7 @@ var button, enterKey;
   }
 
 // **** Main Menu Start function **** ///
-    function startClick () {
+  function startClick () {
     this.game.state.start('lvl1');
   }
 
