@@ -1,2 +1,2 @@
-game.state.add('Boot', BasicGame.Boot);
+game.state.add('Boot', game.Boot);
 game.state.start('menu');
