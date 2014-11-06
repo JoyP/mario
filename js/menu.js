@@ -1,6 +1,8 @@
 (function(){
   game.state.add('menu', {preload:preload, create:create});
 
+  var loadingBar, menu;
+
   function preload(){
     game.load.image('menu', 'assets/backgrounds/PiratesBooty.png');
     game.load.spritesheet('loadingBar', 'assets/loadingCircle.png', 100, 101.75);
