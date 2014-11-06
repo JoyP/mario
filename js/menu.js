@@ -1,12 +1,13 @@
 (function(){
   game.state.add('menu', {preload:preload, create:create});
 
-  var loadingBar, menu;
+  var loadingBar, background;
 
   function preload(){
     game.load.image('menu', 'assets/backgrounds/PiratesBooty.png');
     game.load.spritesheet('loadingBar', 'assets/loadingCircle.png', 100, 101.75);
-    game.add.sprite(0, 0, 'menu');
+    background = game.add.sprite(game.world.centerX, game.world.centerY, 'menu');
+    background.anchor.setTo(0.5, 0.5);
     game.add.sprite(game.world.centerX, game.world.centerY, 'loadingBar');
     loadingBar.animations.add('circle');
     loadingBar.animations.play('circle', 8, true);
