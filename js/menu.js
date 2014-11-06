@@ -5,7 +5,7 @@
     game.load.image('menu', 'assets/backgrounds/PiratesBooty.png');
     game.load.spritesheet('loadingBar', 'assets/loadingCircle.png', 100, 101.75);
     game.add.sprite(0, 0, 'menu');
-    game.add.sprite(game.world.center.x, game.world.center.y, 'loadingBar');
+    game.add.sprite(game.world.centerX, game.world.centerY, 'loadingBar');
     loadingBar.animations.add('circle');
     loadingBar.animations.play('circle', 8, true);
 
