@@ -4,7 +4,7 @@
   var background, bar;
 
   function boot(){
-    game.load.image('startScreen', 'assets/backgrounds/PiratesBooty.png');
+    game.load.image('startScreen', 'assets/backgrounds/loadingScreen.png');
     game.load.spritesheet('loadingBar', 'assets/loadingCircle.png', 100, 101.75);
     background = game.add.sprite(game.world.centerX, game.world.centerY, 'startScreen');
     background.anchor.setTo(0.5, 0.5);
