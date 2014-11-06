@@ -2,11 +2,15 @@
   game.state.add('menu', {preload:preload, create:create});
 
   function preload(){
+    game.load.image('menu', 'assets/backgrounds/PiratesBooty.png');
+    game.load.spritesheet('loadingBar', 'assets/loadingCircle.png', 100, 101.75);
+    game.add.sprite(0, 0, 'menu');
+    game.add.sprite(game.world.center.x, game.world.center.y, 'loadingBar');
+    loadingBar.animations.add('circle');
+    loadingBar.animations.play('circle', 8, true);
 
-		game.load.image('preloaderBar', 'GameFiles/loading2.png');
     game.load.tilemap('mario', 'assets/backgrounds/level1.json', null, Phaser.Tilemap.TILED_JSON);
     game.load.tilemap('mario2', 'assets/backgrounds/marioLevel2.json', null, Phaser.Tilemap.TILED_JSON);
-    game.load.image('menu', 'assets/backgrounds/PiratesBooty.png');
     game.load.image('tiles', 'assets/backgrounds/worldfinal.png');
     game.load.image('boat', 'assets/backgrounds/boatWater2.png');
     game.load.image('cloud1', 'assets/backgrounds/cloud1.png');
