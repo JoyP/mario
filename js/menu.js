@@ -1,17 +1,17 @@
 (function(){
-  game.state.add('menu', {boot:boot, preload:preload, create:create});
+  game.state.add('menu', {preload:preload, create:create});
 
-  var background, bar;
+  // var background, bar;
 
-  function boot(){
-    game.load.image('startScreen', 'assets/backgrounds/loadingScreen.png');
-    game.load.spritesheet('loadingBar', 'assets/loadingCircle.png', 100, 101.75);
-    background = game.add.sprite(game.world.centerX, game.world.centerY, 'startScreen');
-    background.anchor.setTo(0.5, 0.5);
-    bar = game.add.sprite(game.world.centerX, game.world.centerY, 'loadingBar');
-    bar.animations.add('circle');
-    bar.animations.play('circle', true);
-  }
+  // function boot(){
+  //   game.load.image('startScreen', 'assets/backgrounds/loadingScreen.png');
+  //   game.load.spritesheet('loadingBar', 'assets/loadingCircle.png', 100, 101.75);
+  //   background = game.add.sprite(game.world.centerX, game.world.centerY, 'startScreen');
+  //   background.anchor.setTo(0.5, 0.5);
+  //   bar = game.add.sprite(game.world.centerX, game.world.centerY, 'loadingBar');
+  //   bar.animations.add('circle');
+  //   bar.animations.play('circle', true);
+  // }
 
   function preload(){
     game.load.tilemap('mario', 'assets/backgrounds/level1.json', null, Phaser.Tilemap.TILED_JSON);
