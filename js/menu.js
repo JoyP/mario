@@ -4,9 +4,9 @@
   var background, bar;
 
   function boot(){
-    game.load.image('menu', 'assets/backgrounds/PiratesBooty.png');
+    game.load.image('startScreen', 'assets/backgrounds/PiratesBooty.png');
     game.load.spritesheet('loadingBar', 'assets/loadingCircle.png', 100, 101.75);
-    background = game.add.sprite(game.world.centerX, game.world.centerY, 'menu');
+    background = game.add.sprite(game.world.centerX, game.world.centerY, 'startScreen');
     background.anchor.setTo(0.5, 0.5);
     bar = game.add.sprite(game.world.centerX, game.world.centerY, 'loadingBar');
     bar.animations.add('circle');
